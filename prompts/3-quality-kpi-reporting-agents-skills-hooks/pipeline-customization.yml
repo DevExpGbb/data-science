@@ -1,0 +1,14 @@
+agents:
+  - name: quality-kpi-analyst
+    role: Compute water purity KPIs and trend metrics.
+  - name: visualization-assistant
+    role: Produce notebook-ready plots and table formatting.
+skills:
+  - name: kpi-definition-skill
+    behavior: Standardize purity, alert-rate, and site-risk metrics.
+  - name: narrative-synthesis-skill
+    behavior: Convert metrics into concise operations guidance.
+hooks:
+  pre_report:
+    - run: python hooks/pre_report_check.py
+      on_fail: block_report

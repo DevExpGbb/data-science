@@ -1,0 +1,14 @@
+subagent:
+  name: data-intake-auditor
+  role: Validate and clean operational water collection data.
+  handoff_triggers:
+    - mentions schema mismatch
+    - asks for null handling
+    - requests reproducible cleaning pipeline
+skills:
+  - name: schema-check
+    behavior: Validate expected columns and coercible dtypes.
+  - name: missingness-profile
+    behavior: Report null percentages and recommended imputations.
+  - name: contamination-threshold-check
+    behavior: Flag records where purity_score < 75 or contamination_flag = 1.
