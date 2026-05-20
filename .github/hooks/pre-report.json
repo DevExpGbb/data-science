@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "command": "python hooks/pre_report_check.py",
+        "windows": "python hooks/pre_report_check.py",
+        "timeout": 30
+      }
+    ]
+  }
+}
